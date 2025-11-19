@@ -9,12 +9,7 @@ public class ListaEnlazada {
         this.tamanio = 0;
     }
 
-    // --- Métodos de Gestión ---
-
-    /**
-     * Agrega un objeto al final de la lista.
-     * @param dato El objeto a agregar.
-     */
+   
     public void agregar(Object dato) {
         Nodo nuevoNodo = new Nodo(dato);
         if (estaVacia()) {
@@ -27,9 +22,6 @@ public class ListaEnlazada {
         }
         tamanio++;
     }
-    
-    // Método auxiliar para la eliminación, no necesario para las adaptaciones del TP
-    // public void eliminar(int indice) { /* ... implementación ... */ }
 
     public boolean estaVacia() {
         return primero == null;
@@ -43,12 +35,7 @@ public class ListaEnlazada {
         return primero;
     }
     
-    // --- Métodos para Conversión (Requeridos para Ordenar y Buscar Binaria) ---
-
-    /**
-     * Convierte la lista enlazada a un array de objetos.
-     * @return Array de Object con los elementos de la lista.
-     */
+   
     public Object[] convertirAArray() {
         Object[] array = new Object[tamanio];
         Nodo actual = primero;
@@ -61,11 +48,8 @@ public class ListaEnlazada {
         return array;
     }
 
-    /**
-     * Convierte un array de objetos a una nueva Lista Enlazada.
-     * @param array Array de Object a convertir.
-     * @return Nueva ListaEnlazada con los elementos del array.
-     */
+
+
     public static ListaEnlazada convertirArrayALista(Object[] array) {
         ListaEnlazada nuevaLista = new ListaEnlazada();
         for (Object dato : array) {
@@ -74,7 +58,7 @@ public class ListaEnlazada {
         return nuevaLista;
     }
     
-    // --- Método para Iteración y Mostrar (Añadido para simplicidad) ---
+ 
     
     @Override
     public String toString() {

@@ -6,7 +6,7 @@ public class Nodo {
     public Nodo(Object dato) {
         this.dato = dato;
         this.siguiente = null;
-        this.anterior = null; // Inicialmente nulo
+        this.anterior = null; 
     }
 
     public Nodo getSiguiente(){
